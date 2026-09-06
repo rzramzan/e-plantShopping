@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   clearCart,
-  decreaseQuantity,
-  increaseQuantity,
-  removeFromCart
+  removeItem,
+  updateQuantity
 } from "../store/CartSlice";
 
 export default function CartItem() {
@@ -56,7 +55,14 @@ export default function CartItem() {
                   <button
                     type="button"
                     aria-label={`Decrease ${item.name} quantity`}
-                    onClick={() => dispatch(decreaseQuantity(item.id))}
+                    onClick={() =>
+  dispatch(
+    updateQuantity({
+      id: item.id,
+      quantity: item.quantity - 1
+    })
+  )
+}
                   >
                     −
                   </button>
@@ -64,7 +70,14 @@ export default function CartItem() {
                   <button
                     type="button"
                     aria-label={`Increase ${item.name} quantity`}
-                    onClick={() => dispatch(increaseQuantity(item.id))}
+                    onClick={() =>
+  dispatch(
+    updateQuantity({
+      id: item.id,
+      quantity: item.quantity + 1
+    })
+  )
+}
                   >
                     +
                   </button>
@@ -78,7 +91,7 @@ export default function CartItem() {
                 <button
                   type="button"
                   className="delete-button"
-                  onClick={() => dispatch(removeFromCart(item.id))}
+                  onClick={() => dispatch(removeItem(item.id))}
                 >
                   Delete
                 </button>
