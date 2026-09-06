@@ -1,20 +1,26 @@
+jsx
 export default function AboutUs() {
   return (
-    <section className="about-section" id="about">
-      <div className="about-content">
-        <p className="eyebrow">About Paradise Nursery</p>
-        <h2>Plants selected for happier spaces.</h2>
-        <p>
-          Paradise Nursery is an online plant shop focused on making it simple
-          to discover and purchase beautiful houseplants. Our collection
-          includes air-purifying plants, aromatic herbs and medicinal plants
-          suitable for homes and workspaces.
-        </p>
-        <p>
-          We believe that a little greenery can make an everyday environment
-          feel calmer, fresher and more welcoming.
-        </p>
-      </div>
-    </section>
+    <div className="about-us-container">
+      <h2>About Paradise Nursery</h2>
+
+      <p>
+        Paradise Nursery is a plant nursery dedicated to providing beautiful,
+        healthy, and high-quality houseplants for homes and workspaces.
+      </p>
+
+      <p>
+        Our mission is to make it easy for everyone to bring the beauty and
+        benefits of nature into their everyday lives.
+      </p>
+
+      <p>
+        We offer a wide variety of plants, including air-purifying plants,
+        aromatic plants, and medicinal plants. Our goal is to provide
+        customers with quality plants and a simple, convenient shopping
+        experience.
+      </p>
+    </div>
   );
 }
+
